@@ -3,7 +3,7 @@
   <% @tasks.each do |task|%>
     <li>
       <%= link_to task.title, task_path(task) %>
-      <%= link_to task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <%= link_to task_path(task), data: {turbo_method: :delete, turbo_confirm: "Delete #{task.title}?"} do %>
         <%= tag.span class: %w[far fa-trash-alt] %>
       <% end %>
       </li>
